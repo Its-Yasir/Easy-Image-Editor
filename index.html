@@ -3,9 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Basic Image Editor</title>
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  
+  <div class="container">
+    <nav>
+      <button class="edit-nav-btn">Edit</button>
+      <button class="resize-nav-btn">Resize</button>
+      <button class="draw-nav-btn">Draw</button>
+    </nav>
+    <div class="wrapper">
+      <div class="editor-panel">
+        <div class="filter">
+          <label class="title">Filter</label>
+          <div class="option">
+            <button class="active">Brightness</button>
+            <button>Saturation</button>
+            <button>Inversion</button>
+            <button>Grayscale</button>
+          </div>
+          <div class="slider">
+            <div class="filter-info">
+              <p class="name">Brightness</p>
+              <p class="value">100%</p>
+            </div>
+            <input type="range" min="0" max="200" value="100">
+          </div>
+        </div>
+        <div class="rotate">
+          <label class="title">Rotate & Flip
+            <div class="option">
+              <button><i class="fa-solid fa-rotate-left"></i></button>
+              <button><i class="fa-solid fa-rotate-right"></i></button>
+                <button title="Flip Horizontal"><i class="fa-solid fa-arrows-left-right"></i></button>
+                <button title="Flip Vertical"><i class="fa-solid fa-arrows-up-down"></i></button>
+            </div>
+          </label>
+        </div>
+        <div class="remove-background-box">
+          <button class="remove-background">Remove Background</button>
+        </div>
+      </div>
+      <div class="preview-img">
+        <img src="assets/image.png" alt="preview-image">
+      </div>
+    </div>
+    <div class="controls">
+      <button class="reset-filters">Reset Filters</button>
+      <div class="row1">
+        <div class="undo-box">Undo 
+          <i class="fa-solid fa-undo"></i>
+        </div>
+        <div class="redo-box">Redo 
+          <i class="fa-solid fa-redo"></i>
+        </div>
+      </div>
+      <div class="row">
+        <button class="chose-img">Choose Image</button>
+        <button class="save-img">Save Image</button>
+      </div>
+    </div>
+  </div>
+
+  <script src=""></script>
 </body>
 </html>

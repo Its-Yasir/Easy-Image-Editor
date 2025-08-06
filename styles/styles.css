@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+button{
+  cursor: pointer;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;  
+  background-color: #e3f2fd;
+}
+.container{
+  width: 80%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 30px 35px 35px;
+  margin-top: 20px;
+}
+nav{
+  background-color: #bcbcbcb7;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+}
+nav button{
+  padding: 5px 15px;
+  font-size: 16px;
+  color: #333;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: white;
+
+}
+.container .wrapper{
+  display: flex;
+  margin: 20px 0;
+  min-height: 335px;
+}
+.wrapper .editor-panel{
+  padding: 15px 20px;
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.editor-panel .title{
+  display: block;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+.editor-panel .options, .controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.editor-panel button{
+  height: 40px;
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+}
+.editor-panel button:hover{
+  background-color: #f5f5f5;
+}
+.editor-panel .filter button{
+  width: calc(100% / 2 - 4px);
+}
+.filter button.active{
+  color: white;
+  background-color: #5372f0;
+  border-color: #5372f0;
+}
+.filter .slider{
+  margin-top: 12px;
+}
+.filter .slider .filter-info{
+  display: flex;
+  justify-content: space-between;
+  fsize: 14px;
+  color: #464646;
+}
+.filter .slider input{
+  width: 100%;
+  height: 8px;
+  accent-color: #5372f0;
+}
+.editor-panel .rotate{
+  margin-top: 17px;
+}
+.editor-panel .rotate button{
+  width: calc(100% / 4 - 4px);
+}
+.rotate button:nth-child(3),
+.rotate button:nth-child(4),
+.rotate button:nth-child(1),
+.rotate button:nth-child(2){
+  font-size: 18px;
+}
+.wrapper .preview-img{
+  margin-left: 20px;
+}
+.preview-img img{
+  max-height: 440px;
+  min-height: 335px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.controls button{
+  padding: 11px 20px;
+  font-size: 14px;
+}
+.remove-background-box{
+  margin-top: 20px;
+}
+.remove-background-box button{
+  width: 100%;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.remove-background-box button:hover{
+  background-color: #e64a19;
+}
+.reset-filters{
+  height: max-content;
+}
+.row{
+  display: flex;
+  column-gap: 10px;
+}
+.undo-box, .redo-box{
+  width: max-content;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  background-color: #e3e3e3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.wrapper{
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 950px){
+  .wrapper{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .wrapper .editor-panel{
+    width: 100%;
+  }
+  .row{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .controls{
+    justify-content: center;
+    column-gap: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .wrapper .preview-img{
+    height: 300px;
+  }
+  .container{
+    padding: 20px 25px 25px;
+  }
+  .container .wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.chose-img{
+  background-color: rgb(216, 216, 216);
+  border-width: 0;
+  border-radius: 5px;
+}
+.row1{
+  display: flex;
+  column-gap: 10px;
+}
+.save-img{
+  background-color: #5372f0;
+  border-width: 0;
+  border-radius: 5px;
+  color: white;
+}
