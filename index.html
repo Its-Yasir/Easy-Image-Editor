@@ -11,9 +11,15 @@
 <body>
   <div class="container">
     <nav>
-      <button class="edit-nav-btn">Edit</button>
-      <button class="resize-nav-btn">Resize</button>
-      <button class="draw-nav-btn">Draw</button>
+      <a href="index.html">
+        <button class="edit-nav-btn">Edit</button>
+      </a>
+      <a href="resize.html">
+        <button class="resize-nav-btn">Resize</button>
+      </a>
+      <a href="draw.html">
+        <button class="draw-nav-btn active">Draw</button>
+      </a>
     </nav>
     <div class="wrapper">
       <div class="editor-panel">
@@ -62,12 +68,13 @@
         </div>
       </div>
       <div class="row">
+        <input type="file" class="file-input" accept="image/*" hidden>
         <button class="chose-img">Choose Image</button>
         <button class="save-img">Save Image</button>
       </div>
     </div>
-  </div>
+  </div> 
 
-  <script src=""></script>
+  <script src="scripts/edit.js"></script>
 </body>
 </html>
