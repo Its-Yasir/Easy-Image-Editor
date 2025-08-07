@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container disabled">
     <nav>
       <a href="index.html">
         <button class="edit-nav-btn">Edit</button>
@@ -26,10 +26,12 @@
         <div class="filter">
           <label class="title">Filter</label>
           <div class="option">
-            <button class="active">Brightness</button>
-            <button>Saturation</button>
-            <button>Inversion</button>
-            <button>Grayscale</button>
+            <button id="brightness" class="active">Brightness</button>
+            <button id="saturation">Saturation</button>
+            <button id="inversion">Inversion</button>
+            <button id="grayscale">Grayscale</button>
+            <button id="blur">Blur</button>
+            <button id="contrast">Contrast</button>
           </div>
           <div class="slider">
             <div class="filter-info">
@@ -42,15 +44,12 @@
         <div class="rotate">
           <label class="title">Rotate & Flip
             <div class="option">
-              <button><i class="fa-solid fa-rotate-left"></i></button>
-              <button><i class="fa-solid fa-rotate-right"></i></button>
-                <button title="Flip Horizontal"><i class="fa-solid fa-arrows-left-right"></i></button>
-                <button title="Flip Vertical"><i class="fa-solid fa-arrows-up-down"></i></button>
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                <button id="horizontal" title="Flip Horizontal"><i class="fa-solid fa-arrows-left-right"></i></button>
+                <button id="vertical" title="Flip Vertical"><i class="fa-solid fa-arrows-up-down"></i></button>
             </div>
           </label>
-        </div>
-        <div class="remove-background-box">
-          <button class="remove-background">Remove Background</button>
         </div>
       </div>
       <div class="preview-img">

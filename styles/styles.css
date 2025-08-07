@@ -15,6 +15,10 @@ body{
   min-height: 100vh;  
   background-color: #e3f2fd;
 }
+.container.disabled :where(.editor-panel, .reset-filters, .save-img,.row1,){
+  pointer-events: none;
+  opacity: 0.5;
+}
 .container{
   width: 80%;
   max-width: 1200px;
@@ -110,6 +114,7 @@ nav button{
 }
 .wrapper .preview-img{
   margin-left: 20px;
+  overflow: hidden;
 }
 .preview-img img{
   max-height: 440px;
@@ -171,9 +176,15 @@ nav button{
     width: 100%;
     justify-content: space-around;
   }
+  .editor-panel .rotate{
+    margin-top: 5px;
+  }
   .controls{
     justify-content: center;
     column-gap: 20px;
+  }
+  .wrapper .editor-panel{
+    padding: 10px 10px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -181,7 +192,7 @@ nav button{
     height: 300px;
   }
   .container{
-    padding: 20px 25px 25px;
+    padding: 10px 15px 15px;
   }
   .container .wrapper{
     margin-top: 0;
