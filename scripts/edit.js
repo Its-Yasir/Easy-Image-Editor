@@ -71,7 +71,6 @@ const loadImage = ()=>{
     }];
     undoId = 0;
   })
-  console.log(file); // 🪵 Log file info (optional)
 }
 
 // 🎛️ When user clicks on a filter (brightness, saturation, etc.)
@@ -190,7 +189,6 @@ undoBox.addEventListener('click', () => {
   if (undoId - 1 < 0) return; // ⛔ Prevent underflow
   let changesApplied = changesHistory[undoId - 1];
   if(changesApplied){
-    console.log(changesApplied); // Optional debug log
     brightness = changesApplied.brightness;
     saturation = changesApplied.saturation;
     inversion = changesApplied.inversion;
